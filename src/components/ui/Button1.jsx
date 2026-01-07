@@ -1,11 +1,13 @@
 import { FaIcons } from "react-icons/fa";
 import { cn } from "../../utils/Utils";
+import { TrashIcon } from "lucide-react";
 
  export const Button1 = ({
   className = "",
   colorVariant = "blue", // default variant
   children,
-  icon: Icon = FaIcons,// allow custom icons
+  onClick,
+  icon: Icon = TrashIcon,// allow custom icons
   ...props
 }) => {
   // Define color maps
@@ -25,7 +27,7 @@ import { cn } from "../../utils/Utils";
 
   return (
     <div className='flex justify-center'>
-      <button className={cn(
+      <button onClick={onClick} {...props} className={cn(
         "group relative min-w-[150px] w-[200px] h-[45px] border",
         borderColors[colorVariant], // Dynamic Border
         "text-black flex items-center overflow-hidden bg-white",
@@ -33,7 +35,7 @@ import { cn } from "../../utils/Utils";
       )}>
         {/* Sliding Background */}
         <div className={cn(
-          "absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out",
+          "absolute inset-0  -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out",
           bgColors[colorVariant] // Dynamic Sliding BG
         )}></div>
 

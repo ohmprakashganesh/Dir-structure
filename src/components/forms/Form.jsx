@@ -38,7 +38,7 @@ export default function ProfessionalForm() {
   };
   
   return (
-    <div className="w-screen min-h-screen max-h-fit bg-base pb-20  flex justify-center items-center">
+    <div className=" min-h-screen max-h-fit bg-base pb-20  flex justify-center items-center">
     <form onSubmit={handleSubmit(onSubmit)} className="lg:w-120 sm:w-120 md:w-120 w-full mx-3  lg:mx-auto md:mx-auto sm:mx-auto  p-6 space-y-4 bg-white shadow-md rounded-xl">
       <h2 className="text-lg font-bold text-gray-800 text-center border-b pb-2">User Registration</h2>
 
