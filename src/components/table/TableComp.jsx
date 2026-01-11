@@ -2,11 +2,10 @@ import React from "react";
 import { cn } from "../../utils/Utils";
 
 export  const Table = ({ children, className }) => (
-  <div className="w-full overflow-x-auto rounded-lg border border-gray-200">
+  <div className="w-full overflow-x-auto rounded-lg border  border-blue-300">
     <table className={cn("w-full text-left text-sm", className)}>{children}</table>
   </div>
 );
-
 export const TableHeader = ({ children, className }) => (
   <thead className={cn("bg-gray-50 border-b border-gray-200 text-gray-600 font-semibold uppercase text-[11px] tracking-wider", className)}>
     {children}
@@ -28,7 +27,6 @@ export const TableCell = ({ children, className, isHeader = false }) => {
   );
 };
 
-import { Database } from "lucide-react";
 import { BsDatabase } from "react-icons/bs";
 
 export const EmptyState = ({ 

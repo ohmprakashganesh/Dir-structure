@@ -35,7 +35,7 @@ const Button = forwardRef(
         value={value}
         ref={ref}
         {...props}
-       className={cn(  
+       className={cn(
   "  w-full py-3 lg:rounded-none md:rounded-none sm:rounded-none rounded-md   lg:text-md  text-sm  tracking-wide hover:text-base  flex gap-2 items-center shrink justify-center transition-transform duration-500 hover:scale-105  cursor-pointer ",
   sizeClasses[screen] || sizeClasses["xs"], 
   primary && "hover:bg-gray-600 bg-gray-700  hover:font-semibold text-white",

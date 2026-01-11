@@ -13,8 +13,7 @@ import { categories } from "../../data/Mock";
 import { Button } from "@headlessui/react";
 import { DropDown } from "../ui/DropDown";
 import TimePicker from "./TimePicker";
-import DatePicker from "./DatePicker";
-
+import CustomDatePicker from "./CustomDatePicker";
 // 1. Validation Schema
 const schema = z.object({
   fullName: z.string().min(2, "Name is too short"),
@@ -133,16 +132,18 @@ export default function ProfessionalForm() {
 />
 
 {/* --- Date Picker Section --- */}
+{/* --- Date Picker Section --- */}
 <Controller
-  name="date" // Matches Schema
+  name="date"
   control={control}
   render={({ field }) => (
-    <DatePicker
+    <CustomDatePicker
       label="Scheduled Date"
-      value={field.value}
-      onChange={field.onChange}
-      error={errors.date?.message} // Matches Name
-      required
+      value={field.value}      // Controlled value
+      onChange={field.onChange} // Updates Zod/Hook Form
+      error={errors.date?.message}
+      size={16}
+      className="text-gray-400" // Styled for the icon
     />
   )}
 />

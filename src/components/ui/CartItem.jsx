@@ -23,7 +23,6 @@ export const CartItem = ({
             className="w-full h-full object-cover"
         />
     </div>
-
     {/* 2. Middle: Details with responsive text sizes */}
     <div className="flex-1 min-w-0 flex flex-col items-start text-left">
         <span className="text-[8px] sm:text-xs font-semibold uppercase tracking-wider text-blue-600">
@@ -37,7 +36,6 @@ export const CartItem = ({
             ${item.price * quantity}
         </p>
     </div>
-
     {/* 3. Right Side: Smaller controls for mobile */}
     <div className="flex items-center bg-gray-50 rounded-lg sm:rounded-xl p-0.5 sm:p-1 border border-gray-200">
         <button
@@ -46,7 +44,6 @@ export const CartItem = ({
         >
             <Minus size={14} className="sm:w-[18px] sm:h-[18px]" />
         </button>
-
         <span className="w-6 sm:w-10 text-center text-sm sm:text-base font-bold text-gray-900">
             {quantity}
         </span>

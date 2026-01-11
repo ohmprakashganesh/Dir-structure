@@ -7,13 +7,15 @@ import { Card } from './components/ui/Card'
  import  Products from "./data/Mock"
 import LayoutWrapper from './components/layout/LayoutWrapper'
 import { LeafyGreenIcon, TrashIcon } from 'lucide-react'
-import SuccessModal, { StatusModal } from './components/data-display/StatusModal'
+import { StatusModal } from './components/data-display/StatusModal'
 import { useState } from 'react'
 import Loader from './components/data-display/Loader'
 import CartItem from './components/ui/CartItem'
 import ProductList from './components/data-display/Pagination'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import TableExample from './components/table/TableExample'
+
 function App() {
   const [modal, setModal] = useState({ open: true, type: 'success' });
 
@@ -64,6 +66,8 @@ function App() {
 
        <CartItem />
         <ProductList />
+
+        <TableExample />
 
 
  <Footer />
