@@ -9,7 +9,6 @@ const CustomDatePicker = ({ value, onChange, error, label, className, size = 18 
   const openDatePicker = () => {
     calendarRef.current.setOpen(true);
   };
-
   return (
     <div className="flex flex-col gap-1 w-full ">
       {label && <label className="text-sm font-medium text-gray-700">{label}</label>}
@@ -35,7 +34,9 @@ const CustomDatePicker = ({ value, onChange, error, label, className, size = 18 
        <ReactDatePicker
   ref={calendarRef}
   selected={value}
-  onChange={(d) => onChange(d)}
+  onChange={(d) =>{
+    const formattedDate=d?d.toISOString().split("T")[0]:"";
+   onChange(formattedDate)}}
   placeholderText="Select date"
   wrapperClassName="w-full"
   className={`w-full p-2 pr-10 border active:border-gray-600/50 rounded-md ${

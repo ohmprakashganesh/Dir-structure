@@ -82,10 +82,8 @@ export default function ProfessionalForm() {
     { label: "United Kingdom", value: "uk" },
   ]}
 />
-
-
-      <RadioGroup 
-        label="Gender" 
+      <RadioGroup
+        label="Gender"
         name="gender"
         options={[
           { label: "Male", value: "male" },
@@ -94,7 +92,6 @@ export default function ProfessionalForm() {
         {...register("gender")}
         error={errors.gender?.message}
       />
-
       <Checkbox 
         label="I agree to the terms and conditions" 
         {...register("terms")}
