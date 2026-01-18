@@ -1,5 +1,5 @@
 import React from 'react'
-import { cn } from '../../utils/Utils';
+import { cn } from '../utils/Utils';
 
 const LayoutWrapper = ({children, className=""}) => {
   return (

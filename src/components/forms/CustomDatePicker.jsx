@@ -43,8 +43,7 @@ const CustomDatePicker = ({ value, onChange, error, label, className, size = 18 
     error ? 'border-red-500' : 'border-gray-300'
   }`}
 />
-
-        {/* Reset Icon - Shows when a date is selected */}
+        {/* Reset Icon - Shows when a date is selected */} 
         {value && (
           <RotateCcw
             size={16}

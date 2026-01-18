@@ -1,0 +1,1 @@
+// Configuration for third-party libraries. For example, setting up a base URL for Axios or initializing Firebase.
